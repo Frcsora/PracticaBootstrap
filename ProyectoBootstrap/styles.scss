@@ -1,0 +1,128 @@
+$color_header: #aaffaa;
+$morado_principal: #aaaaff;
+$gris_principal: #DADADA;
+$pad:3px;
+@keyframes cambiarColor {
+  0%{
+    background-color:red;
+  }
+  33%{
+    background-color:green;
+  }
+  66%{
+    background-color:blue;
+  }
+  100%{
+    background-color:red;
+  }
+}
+.quitar{
+  display:none;
+}
+.click{
+  cursor:pointer;
+}
+.filaColor{
+  &:nth-child(2n+3){
+    background-color: $gris_principal;
+  }
+  &:nth-child(2n+2){
+    background-color:$morado_principal;
+  }
+}
+.row{
+  text-align: center;
+  p{
+    text-align: justify;
+  }
+  
+}
+.sticky{
+  position: sticky;
+  top:0;
+  
+}
+header{
+  z-index: 100;//Necesari perque els hr no se'm vessin per damunt del header
+}
+.navbar{
+  min-height: 5vh;
+  
+  svg{
+    width: 40px;
+    height: 40px;
+  }
+  
+}
+.borde{
+  border-left: 1px solid black;
+}
+.foto{
+  max-width: 50%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  gap:3vh;
+  align-items: center;
+  justify-content: center;
+}
+.progress{
+
+  text-align: center;
+}
+.submit{
+  width: 80px;
+}
+.cards{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:10vw;
+  .card{
+    box-shadow: inset 0 0 0 2px black;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 45vh;
+  }
+  img{
+    width: 10vw;
+    height: 10vh;
+  }
+}
+
+.jumbotron{
+  width: 100%;
+  height: 7vh;
+  animation: cambiarColor 4s infinite;
+}
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  
+  
+}
+@media screen and (max-width: 991px){
+  body{
+    .borde{
+      border:0;
+    }
+  }
+ .navbar{
+    svg{
+      width: 12vw;
+      height: 10vw;
+    }
+ }
+ .cards{
+    
+    img{
+      width: 30vw;
+      height: 30vh;
+    }
+ }
+}
+
