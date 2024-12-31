@@ -10,7 +10,6 @@ function gestionarBarraProgreso(){
     const message = document.getElementById("message");
     const progressBar = document.getElementById("progressBar");
     let count = 0;
-    console.log("hola")
     if (nombre.value !== "") count++;
     if (email.value !== "" && /^.+@.+\..+$/.test(email.value)) count++;
     if (phone.value !== "" && /^(\+\d{1,2}\s)?\d{3}[\s\-]?\d{3}[\s\-]?\d{3,4}$/.test(phone.value)) count++;

@@ -16,12 +16,119 @@
     color: black;
   }
 }
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+body header {
+  z-index: 100;
+}
+body header .nav-link {
+  transition: color 0.5s ease;
+}
+body header .navbar {
+  min-height: 5vh;
+}
+body header .navbar svg {
+  width: 40px;
+  height: 40px;
+}
+body .main {
+  padding: 0;
+}
+body .main .jumbotron {
+  animation: cambiarColor 8s infinite;
+  padding: 1%;
+}
+body .main .studies .skills-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+body .main .studies .skills-div .skills {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  gap: 1%;
+}
+body .main .studies .skills-div .skills .skills-bar {
+  background-color: green;
+  width: 32%;
+  height: 80%;
+  border-radius: 5px;
+}
+body .main .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main .projects .carousel {
+  width: 100%;
+}
+body .main .projects .carousel .carousel-inner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+body .main .projects .carousel .carousel-inner .carousel-item {
+  margin: 0;
+}
+body .main .projects .carousel .cards .card {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: inset 0 0 0 3px black;
+  padding: 2%;
+  width: 30vw;
+}
+body .main .projects .carousel .cards .card p {
+  text-align: center;
+}
+body .main .projects .carousel .cards .card svg {
+  max-width: 30vw;
+  width: 60%;
+  max-height: 15vh;
+}
+body .main .projects .carousel .cards .card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+body .main .projects .carousel .cards .card .card-body .btn {
+  width: 100%;
+}
+body .main .projects .carousel .cards .card .card-body a {
+  transition: background-color 0.5s ease;
+}
+body .main .projects .carousel .cards .card .card-body a svg {
+  width: 25px;
+}
+body .main .projects .carousel .cards .card .card-body a:hover {
+  background-color: white;
+}
+body .main form {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
 .aboutme img {
   width: 20%;
 }
 
-.nav-link {
-  transition: color 0.5s ease;
+.borde {
+  border-left: 1px solid black;
 }
 
 a:hover {
@@ -31,27 +138,11 @@ a:visited {
   color: #aaaaff;
 }
 
-body {
-  width: 100vw;
-  overflow-x: hidden;
-  min-height: 100vh;
+.row {
+  text-align: center;
 }
-
-.jumbotron {
-  animation: cambiarColor 8s infinite;
-  padding: 1%;
-}
-
-.main {
-  padding: 0;
-}
-
-.quitar {
-  display: none;
-}
-
-.click {
-  cursor: pointer;
+.row p {
+  text-align: justify;
 }
 
 .filaColor:nth-child(even) {
@@ -61,134 +152,15 @@ body {
   background-color: #aaaaff;
 }
 
-.row {
-  text-align: center;
-}
-.row p {
-  text-align: justify;
-}
-
-.sticky {
-  position: sticky;
-  top: 0;
-}
-
-header {
-  z-index: 100;
-}
-
-.navbar {
-  min-height: 5vh;
-}
-.navbar svg {
-  width: 40px;
-  height: 40px;
-}
-
-.borde {
-  border-left: 1px solid black;
-}
-
-.foto {
-  max-width: 50%;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 3vh;
-  align-items: center;
-  justify-content: center;
-}
-
-.skills-div {
-  display: flex;
-  justify-content: space-between;
-  gap: 5%;
-}
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.projects .carousel {
-  width: 100%;
-}
-.projects .carousel .active {
-  display: flex;
-}
-.projects .carousel-inner {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-.projects .carousel-inner .carousel-item {
-  margin: 0;
-}
-.projects .cards .card {
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: inset 0 0 0 3px black;
-  padding: 2%;
-  width: 30vw;
-}
-.projects .cards .card p {
-  text-align: center;
-}
-.projects .cards .card img {
-  max-width: 30vw;
-  width: 60%;
-  max-height: 15vh;
-}
-.projects .cards .card .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-}
-.projects .cards .card .card-body .btn {
-  width: 100%;
-}
-.projects .cards .card .card-body a {
-  transition: background-color 0.5s ease;
-}
-.projects .cards .card .card-body a svg {
-  width: 25px;
-}
-.projects .cards .card .card-body a:hover {
-  background-color: white;
-}
-
 .progress {
   text-align: center;
-}
-
-.submit {
-  width: 80px;
-}
-
-.skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  gap: 1%;
-}
-.skills .skills-bar {
-  background-color: green;
-  width: 32%;
-  height: 80%;
-  border-radius: 5px;
 }
 
 @media screen and (max-width: 1199px) {
   .aboutme img {
     width: 30%;
   }
-  .projects .cards .card {
+  .main .projects .carousel .cards .card {
     width: 50%;
   }
 }
@@ -199,7 +171,7 @@ form {
   body .borde {
     border: 0;
   }
-  .navbar svg {
+  body .navbar svg {
     width: 12vw;
     height: 10vw;
   }
@@ -212,19 +184,19 @@ form {
   .skills-div .skills {
     width: 50%;
   }
-}
-@media screen and (max-width: 575px) {
-  body {
-    font-size: 12px;
-  }
-  .projects .cards {
+  body .main .projects .carousel .cards {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
     height: 50vh;
   }
-  .projects .cards .card {
+  body .main .projects .carousel .cards .card {
     width: 80%;
     padding: 4%;
+  }
+}
+@media screen and (max-width: 575px) {
+  body {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=styles.css.map */

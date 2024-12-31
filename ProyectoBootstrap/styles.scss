@@ -22,17 +22,129 @@ $gris_principal: #DADADA;
     color:black;
   }
 }
+body{
+  width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  header{
+    z-index: 100;//Necesari perque els hr no se'm vessin per damunt del header
+    .nav-link{
+      transition: color 0.5s ease;
+    }
+    .navbar{
+      min-height: 5vh;
+      svg{
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
+  .main{
+    padding: 0;
+    .jumbotron{
+      animation: cambiarColor 8s infinite;
+      padding: 1%;
+    }
+  
+    .studies{
+      .skills-div{
+      display: flex;
+      justify-content: space-between;
+      gap:5%;
+        .skills{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          gap:1%;
+          .skills-bar{
+            background-color: green;
+            width:32%;
+            height: 80%;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  
+    .projects{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .carousel{
+        width: 100%;
+        .carousel-inner{
+          width: 100%;
+          display:flex;
+          justify-content: center;
+          margin:0;
+          .carousel-item{
+            margin:0;
+          }
+        }
+  
+        .cards{
+          .card{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: inset 0 0 0 3px black;
+            padding:2%;
+            width: 30vw;
+            p{
+              text-align: center;
+            }
+            svg{
+              max-width: 30vw;
+              width: 60%;
+              max-height: 15vh;
+            }
+            .card-body{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              width: 100%;
+              .btn{
+                width: 100%;
+              }
+              a{
+                svg{
+                  width: 25px;
+                }
+                transition: background-color 0.5s ease;
+                &:hover{
+                  background-color: white;
+                }
+              }
+            }
+          }    
+        }
+      }  
+    }
+  
+    form{
+      display: flex;
+      flex-direction: column;
+      gap:3vh;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.sticky{
+  position: sticky;
+  top:0;
+}
 .aboutme{
   img{
     width: 20%;
   }
 }
-
-.nav-link{
-  transition: color 0.5s ease;
+.borde{
+  border-left: 1px solid black;
 }
 a{
-
   &:hover{
     color:#0000FF;
   }
@@ -40,23 +152,11 @@ a{
     color: $morado_principal;
   }
 }
-body{
-  width: 100vw;
-  overflow-x: hidden;
-  min-height: 100vh;
-}
-.jumbotron{
-  animation: cambiarColor 8s infinite;
-  padding: 1%;
-}
-.main{
-  padding: 0;
-}
-.quitar{
-  display:none;
-}
-.click{
-  cursor:pointer;
+.row{
+  text-align: center;
+  p{
+    text-align: justify;
+  }
 }
 .filaColor{
   &:nth-child(even){
@@ -66,124 +166,8 @@ body{
     background-color:$morado_principal;
   }
 }
-.row{
-  text-align: center;
-  p{
-    text-align: justify;
-  }
-}
-.sticky{
-  position: sticky;
-  top:0;
-}
-header{
-  z-index: 100;//Necesari perque els hr no se'm vessin per damunt del header
-}
-.navbar{
-  min-height: 5vh;
-  
-  svg{
-    width: 40px;
-    height: 40px;
-  }
-  
-}
-.borde{
-  border-left: 1px solid black;
-}
-.foto{
-  max-width: 50%;
-}
-form{
-  display: flex;
-  flex-direction: column;
-  gap:3vh;
-  align-items: center;
-  justify-content: center;
-}
-.skills-div{
-  display: flex;
-  justify-content: space-between;
-  gap:5%;
-  
-}
-.projects{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  .carousel{
-    width: 100%;
-    .active{
-      display:flex;
-    }
-  }
-  .carousel-inner{
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    margin:0;
-    .carousel-item{
-      margin:0;
-    }
-  }
-  .cards{
-    .card{
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: inset 0 0 0 3px black;
-      padding:2%;
-      width: 30vw;
-      p{
-        text-align: center;
-      }
-      img{
-        max-width: 30vw;
-        width: 60%;
-        max-height: 15vh;
-      }
-      .card-body{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-
-        .btn{
-          width: 100%;
-        }
-        a{
-          svg{
-            width: 25px;
-          }
-          transition: background-color 0.5s ease;
-          &:hover{
-            background-color: white;
-          }
-        }
-      }
-    }    
-  }
-}
 .progress{
-
   text-align: center;
-}
-.submit{
-  width: 80px;
-}
-.skills{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 25%;
-  gap:1%;
-  .skills-bar{
-    background-color: green;
-    width:32%;
-    height: 80%;
-    border-radius: 5px;
-  }
 }
 @media screen and (max-width: 1199px) {
   .aboutme{
@@ -191,13 +175,19 @@ form{
       width: 30%;
     }
   }
-  .projects{
-    .cards{
-      .card{
-        width: 50%;
+  .main{
+    .projects{
+      .carousel{
+        .cards{
+          .card{
+            width: 50%;
+          }
+        }
       }
+      
     }
-   }
+  }
+  
 }
 @media screen and (max-width: 991px){
   body{
@@ -205,17 +195,15 @@ form{
     .borde{
       border:0;
     }
-  }
- .navbar{
-    svg{
-      width: 12vw;
-      height: 10vw;
+    .navbar{
+      svg{
+        width: 12vw;
+        height: 10vw;
+      }
     }
   }
- 
 }
 @media screen and (max-width: 767px){
-  
   .skills-div{
     flex-direction: column;
     gap:0;
@@ -223,23 +211,27 @@ form{
       width: 50%;
     }
   }
-  
+  body{
+    .main{
+      .projects{
+        .carousel{
+          .cards{
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+            height: 50vh;
+            .card{
+              width: 80%;
+              padding: 4%;
+            }
+          } 
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 575px){
   body{
     font-size: 12px;
   }
-  .projects{
-
-    .cards{
-      flex-direction: column;
-      align-items: center;
-      overflow: hidden;
-      height: 50vh;
-      .card{
-        width: 80%;
-        padding: 4%;
-      }
-    }
-   }
 }
